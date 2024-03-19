@@ -1,16 +1,10 @@
-# Sample-Movies-Data
+# Simple Movies API Documentation
 
-Certainly! Below is a README.md template for your GitHub repository:
-
----
-
-# Documentation for API 
-
-Welcome to the Simple Movies API documentation. This API provides access to information about movies, allows users to submit orders for movies, and view existing orders.
+Welcome to the Simple Movies API documentation. This API allows you to access information about movies, reserve a movie, view existing reservations, and update or delete reservations.
 
 ## Base URL
 
-The base URL for this API is: `https://simple-movies-api.glitch.me`
+The base URL for this API is: `https://raw.githubusercontent.com/thehsansaeed/sample-movies-data/main/movies.json`
 
 ## Endpoints
 
@@ -37,48 +31,48 @@ Optional query parameters:
 
 Retrieve detailed information about a movie.
 
-### Submit an Order
+### Reserve a Movie
 
-#### POST /orders
+#### POST /reservations
 
-Allows you to submit a new order. Requires authentication.
+Allows you to reserve a movie. Requires authentication.
 
 Request body (JSON format):
 
 - `movieId`: Integer - Required.
 - `customerName`: String - Required.
 
-### Get All Orders
+### Get All Reservations
 
-#### GET /orders
+#### GET /reservations
 
-Allows you to view all orders. Requires authentication.
+Allows you to view all reservations. Requires authentication.
 
-### Get an Order
+### Get a Reservation
 
-#### GET /orders/:orderId
+#### GET /reservations/:reservationId
 
-Allows you to view an existing order. Requires authentication.
+Allows you to view an existing reservation. Requires authentication.
 
-### Update an Order
+### Update a Reservation
 
-#### PATCH /orders/:orderId
+#### PATCH /reservations/:reservationId
 
-Update an existing order. Requires authentication.
+Update an existing reservation. Requires authentication.
 
 Request body (JSON format):
 
 - `customerName`: String
 
-### Delete an Order
+### Delete a Reservation
 
-#### DELETE /orders/:orderId
+#### DELETE /reservations/:reservationId
 
-Delete an existing order. Requires authentication.
+Delete an existing reservation. Requires authentication.
 
 ## API Authentication
 
-To submit or view an order, you need to register your API client.
+To reserve or view a movie, you need to register your API client.
 
 ### Register API Client
 
@@ -91,6 +85,6 @@ Request body (JSON format):
 
 The response will contain the access token. The access token is valid for 7 days.
 
----
+## Possible Errors
 
-Feel free to customize this README file further to include additional information about your API, such as usage examples, authentication methods, and any other relevant details. Ensure that the README provides clear instructions for users on how to interact with your Simple Movies API.
+- Status code 409: "API client already registered." Try changing the values for clientEmail and clientName to something else.
