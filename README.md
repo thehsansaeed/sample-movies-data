@@ -1,10 +1,10 @@
-# sample-movies-data
+# Sample-Movies-Data
 
 Certainly! Below is a README.md template for your GitHub repository:
 
 ---
 
-# Simple Movies API
+# Documentation for API 
 
 Welcome to the Simple Movies API documentation. This API provides access to information about movies, allows users to submit orders for movies, and view existing orders.
 
